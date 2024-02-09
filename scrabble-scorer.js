@@ -109,21 +109,19 @@ function scorerPrompt() {
          alogorithmChoiceQuestion += `, or ${i}: `;
       } else {
          alogorithmChoiceQuestion += `, ${i}`;
-      }
+      };
    };
 
    let alogorithmChoice = input.question(alogorithmChoiceQuestion);
-   // console.log("DEBUG: algorithm selected"+alogorithChoice);
    return scoringAlgorithms[alogorithmChoice];
 };
-// console.log(scorerPrompt());
 
 function transform(pointStructure) {
    let tempPointStructure = {};
    for (key in pointStructure){
       for(let index=0; index<pointStructure[key].length; index++){
          tempPointStructure[pointStructure[key][index].toLowerCase()] = Number(key);
-      }
+      };
    };
    return tempPointStructure;
 };
